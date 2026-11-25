@@ -1,0 +1,16 @@
+# Operator-specific material: credential applications, keys, certificates.
+# Never commit these to the public repo.
+private/
+*.pem
+*.key
+*.p12
+*.der
+.env
+.env.*
+
+# Build output and local server data (master key, wrapped keys)
+bin/
+data/
+opendrm.json
+__pycache__/
+*.egg-info/

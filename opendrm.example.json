@@ -1,0 +1,22 @@
+{
+  "listen": ":8080",
+  "data_dir": "data",
+  "token_secret_env": "OPENDRM_TOKEN_SECRET",
+  "country_header": "CF-IPCountry",
+  "allowed_origins": ["https://app.example.com"],
+  "stream_lease_seconds": 600,
+  "policies": [
+    {
+      "name": "paid-members",
+      "require_claims": { "plan": "paid" },
+      "max_token_age": 120,
+      "max_streams": 2,
+      "blocked_countries": []
+    },
+    {
+      "name": "registered-viewers",
+      "max_token_age": 120,
+      "max_streams": 3
+    }
+  ]
+}
